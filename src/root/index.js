@@ -11,9 +11,15 @@ export default class Root extends Component {
   }
   render () {
     return <div className='root'>
-      <aside><Menu parent={this} /></aside>
-      <div className="main"><GameBoard parent={this} /></div>
+      <aside><Menu ref='menu' parent={this} /></aside>
+      <div className="main"><GameBoard ref='gameboard' parent={this} /></div>
       <aside><img /></aside>
     </div>
+  }
+  mounted () {
+    this.focusComponent(this.refs.gameboard)
+  }
+  onKeyMenu () {
+    this.focusComponent(this.refs.menu)
   }
 }

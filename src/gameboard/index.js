@@ -14,13 +14,25 @@ export default class GameBoard extends Component {
   }
   render () {
     return <div className='game-board'>
-      {this.grid.map(column => <Column pieces={column} parent={this} />)}
+      {this.grid.map(column =>
+        <Column pieces={column} parent={this}
+          onKeyEnter={this.onKeyEnter.bind(this)}/>)}
     </div>
+  }
+  onKeyEnter () {
+    console.log('onkeyenter sur GameBoard', this.current)
+  }
+  onKeyRight () {
+    this.focus(this.current + 1)
+  }
+  onKeyLeft () {
+    this.focus(this.current - 1)
   }
 }
 class Column extends Component {
-  init ({ pieces }) {
+  init ({ onKeyEnter, pieces }) {
     this.pieces = pieces
+    this.onKeyEnter = onKeyEnter || (() => undefined)
   }
   render () {
     return <div className='game-board__column'>
@@ -32,5 +44,8 @@ class Column extends Component {
       }`}>
       </div>)}
     </div>
+  }
+  onKeyEnter () {
+    console.log(this)
   }
 }
