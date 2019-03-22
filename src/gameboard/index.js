@@ -75,9 +75,9 @@ export default class GameBoard extends Component {
     const lines = getLines()
     const rows = getRows()
     const diags = getDiags(this.grid)
-    console.log('diags', diags)
+    const diags2 = getDiags(getLines().reverse())
     if (lines.some(has4consecutive) || rows.some(has4consecutive) ||
-      diags.some(has4consecutive)) {
+      diags.some(has4consecutive) || diags2.some(has4consecutive)) {
       return true
     }
     return false
