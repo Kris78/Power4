@@ -78,6 +78,7 @@ class Column extends Component {
     // si pas trouvé donc coup invalide (colonne toute remplie par exemple)
     if (slot === -1) return
     column[slot] = board.turn
+    board.$el.classList.toggle('j1')
     if (board.didWin()) {
       board.$el.classList.add('gameover')
       console.log('partie terminée')
@@ -88,7 +89,7 @@ class Column extends Component {
     this.patch()
   }
   render () {
-    return <div className='game-board__column'>
+    return <div className={`game-board__column`}>
       {this.pieces.map(piece => <div className={`game-board__piece ${piece
         ? 'game-board__piece--p1'
         : piece === false
