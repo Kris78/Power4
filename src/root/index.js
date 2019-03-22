@@ -3,6 +3,9 @@ import Menu from '../menu'
 import GameBoard from '../gameboard'
 import { h, Component } from 'splay'
 export default class Root extends Component {
+  init () {
+    this.menuFocused = false
+  }
   onKeyDown () {
     this.focus(this.current + 1)
   }
@@ -20,6 +23,9 @@ export default class Root extends Component {
     this.focusComponent(this.refs.gameboard)
   }
   onKeyMenu () {
-    this.focusComponent(this.refs.menu)
+    this.focusComponent(this.menuFocused
+      ? this.refs.gameboard
+      : this.refs.menu)
+    this.menuFocused = !this.menuFocused
   }
 }
