@@ -36,13 +36,31 @@ export default class GameBoard extends Component {
   onKeyUp () { }
   onKeyDown () { }
   didWin () {
+    function getDiags (m) {
+      var s
+      var x
+      var y
+      var d
+      var o = []
+      for (s = 0; s < m.length; s++) {
+        d = []
+        for (y = s, x = 0; y >= 0; y--, x++) d.push(m[y][x])
+        o.push(d)
+      }
+      for (s = 1; s < m[0].length; s++) {
+        d = []
+        for (y = m.length - 1, x = s; x < m[0].length; y--, x++) d.push(m[y][x])
+        o.push(d)
+      }
+      return o
+    }
+
     const has4consecutive = arr => {
       const str = arr.map(x => ({
         true: 'A',
         false: 'B',
         null: ' '
       })[x]).join('').trim()
-      console.log(str)
       return str.includes('AAAA') || str.includes('BBBB')
     }
     const getLines = () => {
@@ -55,10 +73,11 @@ export default class GameBoard extends Component {
     }
     const getRows = () => this.grid
     const lines = getLines()
-    console.log('lines', lines)
     const rows = getRows()
-    console.log('rows', rows)
-    if (lines.some(has4consecutive) || rows.some(has4consecutive)) {
+    const diags = getDiags(this.grid)
+    console.log('diags', diags)
+    if (lines.some(has4consecutive) || rows.some(has4consecutive) ||
+      diags.some(has4consecutive)) {
       return true
     }
     return false
@@ -66,7 +85,6 @@ export default class GameBoard extends Component {
 }
 class Column extends Component {
   init ({ board, pieces }) {
-    console.log('init with pieces ', pieces)
     this.pieces = pieces
     this.board = board
   }
