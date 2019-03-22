@@ -23,25 +23,44 @@ body {
     overflow: hidden;
   }
   &__background {
-      background: url(../assets/images/background.png);
-      background-repeat: no-repeat;
-      content: "";
-      opacity: 0.5;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1;
+    background: url(../assets/images/background.png);
+    background-repeat: no-repeat;
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
   }
   &__menu {
     &.hasFocus {
-
     }
   }
   &__container {
     &.hasFocus {
+    }
+  }
+}
 
-    } 
+// Power4
+
+.root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  .main {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  aside {
+    width: 200px;
+    background-color: red;
   }
 }

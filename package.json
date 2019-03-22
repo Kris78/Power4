@@ -39,6 +39,7 @@
     "@babel/runtime": "^7.2.0",
     "isomorphic-fetch": "^2.2.1",
     "jsonlint": "^1.6.3",
-    "splay": "^2.0.1"
+    "splay": "^2.0.1",
+    "style.css": "^1.0.0"
   }
 }

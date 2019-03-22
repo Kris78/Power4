@@ -1,4 +1,5 @@
 import { h, Component } from 'splay'
+import './style.less'
 export default class GameBoard extends Component {
   init () {
     this.turn = false
