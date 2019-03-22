@@ -12,7 +12,7 @@ export default class Root extends Component {
   render () {
     return <div className='root'>
       <aside><Menu parent={this} /></aside>
-      <div><GameBoard parent={this} /></div>
+      <div className="main"><GameBoard parent={this} /></div>
       <aside><img /></aside>
     </div>
   }
