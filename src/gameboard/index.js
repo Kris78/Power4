@@ -41,7 +41,8 @@ export default class GameBoard extends Component {
         true: 'A',
         false: 'B',
         null: ' '
-      })).join().trim()
+      })[x]).join('').trim()
+      console.log(str)
       return str.includes('AAAA') || str.includes('BBBB')
     }
     const getLines = () => {
@@ -54,7 +55,9 @@ export default class GameBoard extends Component {
     }
     const getRows = () => this.grid
     const lines = getLines()
+    console.log('lines', lines)
     const rows = getRows()
+    console.log('rows', rows)
     if (lines.some(has4consecutive) || rows.some(has4consecutive)) {
       return true
     }
@@ -76,8 +79,9 @@ class Column extends Component {
     if (slot === -1) return
     column[slot] = board.turn
     if (board.didWin()) {
-      board.$el.classList.append('gameover')
+      board.$el.classList.add('gameover')
       console.log('partie terminée')
+      this.patch()
       return
     }
     board.turn = !board.turn
