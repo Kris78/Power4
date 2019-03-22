@@ -107,7 +107,7 @@ class Column extends Component {
     this.patch()
   }
   render () {
-    return <div className={`game-board__column`}>
+    return <div className='game-board__column'>
       {this.pieces.map(piece => <div className={`game-board__piece ${piece
         ? 'game-board__piece--p1'
         : piece === false
