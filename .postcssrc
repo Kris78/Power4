@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "postcss-css-reset": {},
+    "postcss-custom-properties": {
+      "preserve": false,
+      "importFrom": [{"customProperties":{
+        "--focus-color":'#e12a48'
+      }}]
+    }
+  }
+}

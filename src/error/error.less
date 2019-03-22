@@ -1,0 +1,25 @@
+@padding: 150px;
+
+.error {
+  text-align: center;
+  padding-top: @padding;
+  background-color: black;
+  width: 1280px;
+  height: 720px - @padding;
+  color: white;
+  &__heading {
+    font-size: 36px;
+  }
+  &__message {
+    font-size: 22px;
+    opacity: .5;
+  }
+  &__button {
+    margin-top: 40px;
+    padding: 18px 40px;
+    border-radius: 2px;
+    font-size: 22px;
+    display: inline-block;
+    background-color: var(--focus-color)
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel src/index.html --hmr-hostname 0.0.0.0 --port 1973"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://obelatar@gaas.canal-plus.com/scm/ftv/monitor.git"
+  },
+  "author": "Mohammed Ousama BELATAR",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-splay-classname-injector": "file:babel-plugin-splay-classname-injector",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "less": "^3.9.0",
+    "parcel-bundler": "^1.10.3",
+    "postcss-css-reset": "^1.0.2",
+    "postcss-custom-properties": "^8.0.9"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/runtime": "^7.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jsonlint": "^1.6.3",
+    "splay": "^2.0.1"
+  }
+}

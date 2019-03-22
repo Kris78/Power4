@@ -1,0 +1,47 @@
+body {
+  color: #aaafb4;
+  overflow: hidden;
+  margin: 0;
+}
+.root {
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  position: absolute;
+  &__title {
+    padding-bottom: 21px;
+    text-align: center;
+    padding-top: 75px;
+    font-size: 26px;
+    color: white;
+  }
+  &__contents {
+    position: absolute;
+    top: 250px;
+    height: 720px - 250px;
+    width: 1280px;
+    overflow: hidden;
+  }
+  &__background {
+      background: url(../assets/images/background.png);
+      background-repeat: no-repeat;
+      content: "";
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+  }
+  &__menu {
+    &.hasFocus {
+
+    }
+  }
+  &__container {
+    &.hasFocus {
+
+    } 
+  }
+}

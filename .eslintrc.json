@@ -1,0 +1,13 @@
+{
+  "extends": "standard",
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "max-len": ["error"],
+    "no-unused-vars": ["error", {"varsIgnorePattern": "\\bh\\b", "args": "none"}],
+    "react/jsx-uses-vars": "error"
+  }
+}

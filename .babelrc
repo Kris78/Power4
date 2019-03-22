@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-runtime"],
+    ["@babel/plugin-transform-react-jsx", {pragma: "h.h", pragmaFrag: "''"}],
+    ["@babel/plugin-proposal-optional-chaining"],
+    ["@babel/plugin-proposal-class-properties", { loose: true }],
+    ["@babel/plugin-proposal-pipeline-operator", {proposal: "minimal"}],
+    ["splay-classname-injector", {extends: "Component"}]
+  ]
+}
