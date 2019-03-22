@@ -12,16 +12,24 @@ export default class GameBoard extends Component {
     ]
   }
   render () {
-    return <div class='game-board'>
-      {this.grid.map(column =>
-        <div className='game-board__column'>
-          {column.map(pawn => <div className={`game-board__pawn ${pawn
-            ? 'game-board__pawn--p1'
-            : pawn === false
-              ? 'game-board__pawn--p2'
-              : ''}`}>
-          </div>)}
-        </div>)}
+    return <div className='game-board'>
+      {this.grid.map(column => <Column pieces={column} parent={this} />)}
+    </div>
+  }
+}
+class Column extends Component {
+  init ({ pieces }) {
+    this.pieces = pieces
+  }
+  render () {
+    return <div className='game-board__column'>
+      {this.pieces.map(piece => <div className={`game-board__piece ${piece
+        ? 'game-board__piece--p1'
+        : piece === false
+          ? 'game-board__piece--p2'
+          : ''
+      }`}>
+      </div>)}
     </div>
   }
 }
