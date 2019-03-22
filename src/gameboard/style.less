@@ -15,9 +15,22 @@
   flex-direction: column-reverse;
 
   background-color: blue;
+  position: relative;
 
   &.hasFocus {
     background-color: rgb(42, 194, 255);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 8px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: -78px;
+    }
   }
 }
 

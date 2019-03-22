@@ -55,11 +55,46 @@ body {
     -ms-flex-positive: 1;
     flex-grow: 1;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 80px;
   }
 
   aside {
     width: 300px;
     // background-color: red;
+    &.has-logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    }
+  }
+
+  .logo__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    margin: auto 60px 60px 0;
+    background-color: black;
+    border: 3px solid white;
+  }
+  .logo__logo {
+    width: 90%;
+    height: 90%;
+    background: url(../assets/images/Canal+_Family_PL.png) center center
+      no-repeat;
+    background-size: contain;
   }
 }
