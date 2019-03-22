@@ -16,7 +16,11 @@ export default class Root extends Component {
     return <div className='root'>
       <aside><Menu ref='menu' parent={this} /></aside>
       <div className="main"><GameBoard ref='gameboard' parent={this} /></div>
-      <aside><img /></aside>
+      <aside className="has-logo">
+        <div className="logo__wrapper">
+          <div className="logo__logo"></div>
+        </div>
+      </aside>
     </div>
   }
   mounted () {
