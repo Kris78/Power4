@@ -2,7 +2,7 @@ import { h, Component } from 'splay'
 import './style.less'
 export default class GameBoard extends Component {
   init () {
-    this.turn = false
+    this.turn = true
     this.grid = [ // chaque ligne est colonne verticale
       Array(6).fill(null), // null = slot vide
       Array(6).fill(null),
